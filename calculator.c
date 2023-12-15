@@ -1,11 +1,12 @@
 #include<stdio.h>
 double add(double a, double b);
 double sub(double a, double b);
+double mul(double a, double b);
 
 int main(){
     char choice;
     double a,b,ans;
-    printf("Would you like to add(a) or subtract(s): \n");
+    printf("Would you like to add(a), subtract(s), or multiply(m): \n");
     scanf("%c" , &choice);
     printf("Enter two numbers: \n");
     scanf("%lf" , &a);
@@ -17,6 +18,9 @@ int main(){
             break;
         case 's':
             ans = sub(a,b);
+            break;
+        case 'm':
+            ans  = mul(a,b);
             break;
         default:
             printf("Invalid opperation");
@@ -35,4 +39,8 @@ double add(double a, double b){
 
 double sub(double a, double b){
     return(a-b);
+}
+
+double mul(double a, double b){
+    return(a*b);
 }
